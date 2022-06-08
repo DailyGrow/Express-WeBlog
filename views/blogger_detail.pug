@@ -1,0 +1,21 @@
+extends layout
+
+block content
+
+  h1 Blogger: #{blogger.name}
+  
+  div(style='margin-left:20px;margin-top:20px')
+
+    h4 Blogs
+    
+    dl
+    each blog in blogs
+      dt 
+        a(href=blog.url) #{blog.title}
+      dd #{blog.content}
+
+    else
+      p This blogger has no posts.
+      
+  
+ 
