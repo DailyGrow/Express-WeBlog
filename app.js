@@ -20,8 +20,8 @@ var mongoose = require('mongoose');
 
 require('dotenv').config();
 
-var dev_db_url = 'mongodb+srv://bei:<password>@chenjiecluster2.x5gcy.mongodb.net/cs5610web?retryWrites=true&w=majority';
-var mongoDB = process.env.uri || dev_db_url;
+var dev_db_url = 'mongodb+srv://bei:858519155@chenjiecluster2.x5gcy.mongodb.net/cs5610web?retryWrites=true&w=majority';
+var mongoDB = process.env.MONGODB_URI || dev_db_url;
 mongoose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology: true});
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;
