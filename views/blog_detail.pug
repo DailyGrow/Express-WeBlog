@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  h1 Title: #{blog.title}
+  
+  p #[strong Blogger:] 
+    a(href=blog.blogger.url) #{blog.blogger.name}
+  p #[strong Content:] #{blog.content}
+  p #[strong date:] #{blog.date}
+  p #[strong Genre:] 
+    each val in blog.genre
+      a(href=val.url) #{val.name+"; "}
+    
+    
+    
+      
+        
+  
+  div(style='margin-left:20px;margin-top:20px')
+    
+    
+      
+  
